@@ -1,13 +1,9 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import { tanstackRouter } from "@tanstack/router-plugin/vite";
 
 export default defineConfig({
-  base: '/agent-design/',
-  plugins: [
-    TanStackRouterVite({ quoteStyle: 'single' }),
-    react(),
-    tailwindcss(),
-  ],
-})
+  base: "/agents-design/",
+  plugins: [tanstackRouter({ quoteStyle: "single" }), react(), tailwindcss()],
+});
