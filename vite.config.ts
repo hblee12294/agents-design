@@ -4,6 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 import { tanstackRouter } from "@tanstack/router-plugin/vite";
 
 export default defineConfig({
-  base: "/agents-design/",
+  base: "/",
   plugins: [tanstackRouter({ quoteStyle: "single" }), react(), tailwindcss()],
 });

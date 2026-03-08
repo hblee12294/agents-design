@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A curated content website for AI agent design pattern articles, built with React + TypeScript + Vite and deployed to GitHub Pages at `https://hblee.github.io/agent-design/`.
+A curated content website for AI agent design pattern articles, built with React + TypeScript + Vite and deployed via GitHub Pages (hblee12294) at `https://agentsdesign.dev`.
 
 ## Commands
 
@@ -23,7 +23,7 @@ pnpm preview   # Preview production build
 
 **Styling:** Tailwind CSS 4 with custom OKLCH accent palette and dark mode (`.dark` class on `<html>`). Typography plugin handles prose styling for article content.
 
-**Build:** Vite with base path `/agent-design/` for GitHub Pages subpath deployment. CI/CD via `.github/workflows/deploy.yml`.
+**Build:** Vite with base path `/` for custom domain deployment. CI/CD via `.github/workflows/deploy.yml`.
 
 ## Key Conventions
 
