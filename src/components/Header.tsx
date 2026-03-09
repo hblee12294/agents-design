@@ -3,7 +3,7 @@ import { ThemeToggle } from './ThemeToggle'
 
 export function Header() {
   return (
-    <header className="border-b border-neutral-200 dark:border-neutral-800">
+    <header className="sticky top-0 z-50 border-b border-neutral-200/80 dark:border-neutral-800/80 bg-neutral-50/80 dark:bg-neutral-950/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-6">
         <Link to="/" className="group">
           <h1 className="text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">

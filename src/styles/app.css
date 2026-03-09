@@ -21,6 +21,15 @@
 
 html {
   font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: oklch(0.87 0.056 264);
+}
+
+.dark ::selection {
+  background-color: oklch(0.36 0.090 264);
 }
 
 body {

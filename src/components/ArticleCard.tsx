@@ -8,7 +8,7 @@ interface ArticleCardProps {
 
 export function ArticleCard({ article }: ArticleCardProps) {
   return (
-    <article className="group py-8 first:pt-0">
+    <article className="group -mx-4 rounded-2xl px-4 py-6 transition-colors duration-300 hover:bg-neutral-100/60 dark:hover:bg-white/[0.03]">
       <div className="flex flex-wrap gap-1.5 mb-3">
         {article.tags.map((tag) => (
           <TagBadge key={tag} tag={tag} />
@@ -21,6 +21,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
       >
         <h2 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors duration-200">
           {article.title}
+          <span className="inline-block ml-1.5 text-accent-500 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">&rarr;</span>
         </h2>
       </Link>
       <div className="mt-1.5 flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">

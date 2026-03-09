@@ -31,9 +31,9 @@ function ArticlePage() {
     <article>
       <Link
         to="/"
-        className="inline-flex items-center gap-1 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 transition-colors mb-8"
+        className="group/back inline-flex items-center gap-1.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors mb-8"
       >
-        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <svg className="h-4 w-4 transition-transform duration-200 group-hover/back:-translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
         </svg>
         All articles
@@ -45,7 +45,7 @@ function ArticlePage() {
             <TagBadge key={tag} tag={tag} />
           ))}
         </div>
-        <h1 className="text-3xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
+        <h1 className="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
           {article.title}
         </h1>
         <div className="mt-2 flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
@@ -68,7 +68,7 @@ function ArticlePage() {
           href={article.originalUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-lg bg-accent-600 px-4 py-2 text-sm font-medium text-white hover:bg-accent-700 transition-colors"
+          className="inline-flex items-center gap-2 rounded-xl bg-neutral-900 dark:bg-white px-5 py-2.5 text-sm font-medium text-white dark:text-neutral-900 hover:bg-neutral-700 dark:hover:bg-neutral-200 transition-colors duration-200"
         >
           Read the original
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

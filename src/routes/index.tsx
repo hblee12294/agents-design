@@ -22,7 +22,7 @@ function HomePage() {
       <section className="mb-10">
         <TagFilter tags={tags} activeTag={activeTag} onTagSelect={setActiveTag} />
       </section>
-      <section className="divide-y divide-neutral-200 dark:divide-neutral-800">
+      <section className="space-y-2">
         {filtered.map((article) => (
           <ArticleCard key={article.slug} article={article} />
         ))}
