@@ -42,7 +42,7 @@ function ArticlePage() {
         <Link
           to="/"
           search={{ topic: article.topic }}
-          className="text-xs font-medium text-accent-600 dark:text-accent-400 uppercase tracking-wider hover:underline underline-offset-2"
+          className="text-xs font-medium text-neutral-500 dark:text-neutral-400 uppercase tracking-wider hover:text-neutral-900 dark:hover:text-neutral-200 hover:underline underline-offset-2"
         >
           {article.topic}
         </Link>

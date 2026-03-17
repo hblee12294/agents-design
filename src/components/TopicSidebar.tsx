@@ -19,8 +19,8 @@ export function TopicSidebar() {
           search={{ topic }}
           className={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
             activeTopic === topic
-              ? 'bg-accent-50 text-accent-700 dark:bg-accent-950 dark:text-accent-300'
-              : 'text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-white/[0.05] dark:hover:text-neutral-200'
+              ? 'bg-neutral-100 text-neutral-900 font-semibold dark:bg-neutral-800 dark:text-neutral-100'
+              : 'text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-200'
           }`}
         >
           {topic}
