@@ -1,27 +1,27 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { useState } from 'react'
-import { getAllArticles, getAllTags } from '../lib/articles'
+import { getAllArticles, getAllTopics } from '../lib/articles'
 import { ArticleCard } from '../components/ArticleCard'
-import { TagFilter } from '../components/TagFilter'
+
+interface HomeSearch {
+  topic?: string
+}
 
 export const Route = createFileRoute('/')({
+  validateSearch: (search: Record<string, unknown>): HomeSearch => ({
+    topic: typeof search.topic === 'string' ? search.topic : undefined,
+  }),
   component: HomePage,
 })
 
 function HomePage() {
   const articles = getAllArticles()
-  const tags = getAllTags()
-  const [activeTag, setActiveTag] = useState<string | null>(null)
+  const { topic } = Route.useSearch()
+  const activeTopic = topic ?? getAllTopics()[0]!
 
-  const filtered = activeTag
-    ? articles.filter((a) => a.tags.includes(activeTag))
-    : articles
+  const filtered = articles.filter((a) => a.topic === activeTopic)
 
   return (
     <div>
-      <section className="mb-10">
-        <TagFilter tags={tags} activeTag={activeTag} onTagSelect={setActiveTag} />
-      </section>
       <section className="space-y-2">
         {filtered.map((article) => (
           <ArticleCard key={article.slug} article={article} />

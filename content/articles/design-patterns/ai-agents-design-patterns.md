@@ -5,6 +5,7 @@ summary: "A comprehensive overview of the major design patterns for building AI 
 author: Kerem Aydin
 date: "2025-01-15"
 originalUrl: https://medium.com/@keremaydin03/ai-agents-design-patterns-explained-bc5e5e2bb349
+topic: Design Patterns
 tags:
   - design patterns
   - multi-agent

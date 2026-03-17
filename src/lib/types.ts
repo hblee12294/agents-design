@@ -5,6 +5,7 @@ export interface ArticleFrontmatter {
   author: string
   date: string
   originalUrl: string
+  topic: string
   tags: string[]
 }
 

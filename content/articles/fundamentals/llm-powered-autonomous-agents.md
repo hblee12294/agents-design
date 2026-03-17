@@ -5,6 +5,7 @@ summary: "Lilian Weng's seminal deep-dive into the architecture of LLM-based aut
 author: Lilian Weng
 date: "2023-06-23"
 originalUrl: https://lilianweng.github.io/posts/2023-06-23-agent/
+topic: Fundamentals
 tags:
   - planning
   - memory

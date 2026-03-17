@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { getArticleBySlug } from '../../lib/articles'
 import { MarkdownRenderer } from '../../components/MarkdownRenderer'
-import { TagBadge } from '../../components/TagBadge'
 
 export const Route = createFileRoute('/article/$slug')({
   component: ArticlePage,
@@ -40,12 +39,14 @@ function ArticlePage() {
       </Link>
 
       <header className="mb-8">
-        <div className="flex flex-wrap gap-1.5 mb-3">
-          {article.tags.map((tag) => (
-            <TagBadge key={tag} tag={tag} />
-          ))}
-        </div>
-        <h1 className="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
+        <Link
+          to="/"
+          search={{ topic: article.topic }}
+          className="text-xs font-medium text-accent-600 dark:text-accent-400 uppercase tracking-wider hover:underline underline-offset-2"
+        >
+          {article.topic}
+        </Link>
+        <h1 className="mt-2 text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
           {article.title}
         </h1>
         <div className="mt-2 flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">

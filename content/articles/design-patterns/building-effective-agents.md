@@ -5,6 +5,7 @@ summary: "Anthropic's guide to building effective AI agents, covering workflow p
 author: Anthropic
 date: "2024-12-20"
 originalUrl: https://www.anthropic.com/research/building-effective-agents
+topic: Design Patterns
 tags:
   - workflow patterns
   - tool use

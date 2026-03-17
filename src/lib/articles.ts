@@ -1,7 +1,7 @@
 import fm from 'front-matter'
 import type { Article, ArticleFrontmatter } from './types'
 
-const modules = import.meta.glob('/content/articles/*.md', {
+const modules = import.meta.glob('/content/articles/**/*.md', {
   eager: true,
   query: '?raw',
   import: 'default',
@@ -22,12 +22,12 @@ export function getArticleBySlug(slug: string): Article | undefined {
   return articles.find((a) => a.slug === slug)
 }
 
-export function getAllTags(): string[] {
-  const tagSet = new Set<string>()
+const TOPIC_ORDER = ['Fundamentals', 'Design Patterns', 'Best Practices']
+
+export function getAllTopics(): string[] {
+  const topicSet = new Set<string>()
   for (const article of articles) {
-    for (const tag of article.tags) {
-      tagSet.add(tag)
-    }
+    topicSet.add(article.topic)
   }
-  return Array.from(tagSet).sort()
+  return TOPIC_ORDER.filter((t) => topicSet.has(t))
 }

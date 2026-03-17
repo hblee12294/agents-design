@@ -1,6 +1,5 @@
 import { Link } from '@tanstack/react-router'
 import type { Article } from '../lib/types'
-import { TagBadge } from './TagBadge'
 
 interface ArticleCardProps {
   article: Article
@@ -9,15 +8,13 @@ interface ArticleCardProps {
 export function ArticleCard({ article }: ArticleCardProps) {
   return (
     <article className="group -mx-4 rounded-2xl px-4 py-6 transition-colors duration-300 hover:bg-neutral-100/60 dark:hover:bg-white/[0.03]">
-      <div className="flex flex-wrap gap-1.5 mb-3">
-        {article.tags.map((tag) => (
-          <TagBadge key={tag} tag={tag} />
-        ))}
-      </div>
+      <span className="text-xs font-medium text-neutral-400 dark:text-neutral-500 uppercase tracking-wider">
+        {article.topic}
+      </span>
       <Link
         to="/article/$slug"
         params={{ slug: article.slug }}
-        className="block"
+        className="block mt-1.5"
       >
         <h2 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors duration-200">
           {article.title}

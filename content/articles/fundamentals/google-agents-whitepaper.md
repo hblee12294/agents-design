@@ -5,6 +5,7 @@ summary: "Google's comprehensive whitepaper distinguishing agents from plain mod
 author: Google
 date: "2024-09-01"
 originalUrl: https://arxiv.org/abs/2409.02977
+topic: Fundamentals
 tags:
   - architecture
   - orchestration

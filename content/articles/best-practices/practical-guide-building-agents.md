@@ -5,6 +5,7 @@ summary: "OpenAI's practical guide covering the three pillars of agent construct
 author: OpenAI
 date: "2025-01-16"
 originalUrl: https://platform.openai.com/docs/guides/agents
+topic: Best Practices
 tags:
   - best practices
   - tool use
