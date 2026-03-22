@@ -1,7 +1,14 @@
 {
   "name": "agents-design",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "A curated collection of the best articles on AI agent design patterns, best practices, and architecture.",
+  "license": "MIT",
+  "author": "Hongbin Li",
+  "homepage": "https://agentsdesign.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hblee12294/agent-design"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
