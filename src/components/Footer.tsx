@@ -3,6 +3,9 @@ export function Footer() {
     <footer className="border-t border-neutral-100 dark:border-neutral-800/60">
       <div className="mx-auto max-w-6xl px-8 lg:px-12 py-8 text-sm text-neutral-400 dark:text-neutral-500">
         <p className="text-right">
+          All articles are curated summaries. Rights belong to the original authors.
+        </p>
+        <p className="text-right mt-2">
           Agents Design{' '}
           <span className="mx-1">&middot;</span>
           <a
