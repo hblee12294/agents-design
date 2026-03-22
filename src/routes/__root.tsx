@@ -11,9 +11,9 @@ function RootLayout() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <div className="mx-auto w-full max-w-5xl flex-1 px-6 py-10 flex gap-10">
-        <aside className="hidden md:block w-48 shrink-0 pt-1">
-          <div className="sticky top-20">
+      <div className="mx-auto w-full max-w-6xl flex-1 px-8 lg:px-12 py-14 flex gap-14">
+        <aside className="hidden md:block w-44 shrink-0">
+          <div className="sticky top-8">
             <TopicSidebar />
           </div>
         </aside>

@@ -19,7 +19,7 @@ function ArticlePage() {
         </h2>
         <Link
           to="/"
-          className="mt-4 inline-block text-accent-600 dark:text-accent-400 underline underline-offset-2"
+          className="mt-4 inline-block text-neutral-500 dark:text-neutral-400 underline underline-offset-2 hover:text-neutral-900 dark:hover:text-neutral-200"
         >
           Back to all articles
         </Link>
@@ -32,7 +32,7 @@ function ArticlePage() {
       <Link
         to="/"
         search={{ topic: article.topic }}
-        className="group/back inline-flex items-center gap-1.5 text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors mb-8"
+        className="group/back inline-flex items-center gap-1.5 text-sm text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors mb-10"
       >
         <svg className="h-4 w-4 transition-transform duration-200 group-hover/back:-translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
@@ -40,16 +40,14 @@ function ArticlePage() {
         {article.topic}
       </Link>
 
-      <header className="mb-8">
-        <div className="flex flex-wrap items-center gap-2 mb-3">
-          <Link
-            to="/"
-            search={{ topic: article.topic }}
-            className="text-xs font-medium text-neutral-500 dark:text-neutral-400 uppercase tracking-wider hover:text-neutral-900 dark:hover:text-neutral-200 hover:underline underline-offset-2"
-          >
-            {article.topic}
-          </Link>
-          <span className="text-neutral-300 dark:text-neutral-600">/</span>
+      <header className="mb-10">
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 leading-tight">
+          {article.title}
+        </h1>
+        <p className="mt-4 text-lg text-neutral-500 dark:text-neutral-400 leading-relaxed">
+          {article.summary}
+        </p>
+        <div className="mt-5 flex flex-wrap items-center gap-2">
           {article.tags.map((tag) => (
             <Link
               key={tag}
@@ -61,10 +59,7 @@ function ArticlePage() {
             </Link>
           ))}
         </div>
-        <h1 className="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
-          {article.title}
-        </h1>
-        <div className="mt-2 flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
+        <div className="mt-6 flex items-center gap-1.5 text-sm text-neutral-400 dark:text-neutral-500">
           <span>{article.author}</span>
           <span>&middot;</span>
           <time dateTime={article.date}>
@@ -79,8 +74,8 @@ function ArticlePage() {
 
       <MarkdownRenderer content={article.body} />
 
-      <section className="mt-16 pt-10 border-t border-neutral-200 dark:border-neutral-800">
-        <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-5">
+      <section className="mt-20 pt-10 border-t border-neutral-100 dark:border-neutral-800/60">
+        <h2 className="text-lg font-bold text-neutral-900 dark:text-neutral-100 mb-5">
           Discover more
         </h2>
         <div className="flex flex-wrap gap-2">

@@ -3,15 +3,19 @@ import { ThemeToggle } from './ThemeToggle'
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-200/80 dark:border-neutral-800/80 bg-neutral-50/80 dark:bg-neutral-950/80 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-6">
-        <Link to="/" className="group">
-          <h1 className="text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
-            Agent Design Cookbook
-          </h1>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">
-            Curated articles on building AI agents
-          </p>
+    <header className="border-b border-neutral-100 dark:border-neutral-800/60">
+      <div className="mx-auto max-w-6xl flex items-center justify-between px-8 lg:px-12 py-6">
+        <Link to="/" className="flex items-center gap-2.5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-7 w-7 shrink-0">
+            <rect width="32" height="32" rx="7" fill="#111" className="dark:fill-neutral-200" />
+            <g stroke="white" strokeWidth="2.5" strokeLinecap="round" fill="none" className="dark:[stroke:#111]">
+              <path d="M4 24V12L8 8L12 12V24M4 18H12" />
+              <path d="M20 8V24H22C26 24 28 20 28 16S26 8 22 8H20" />
+            </g>
+          </svg>
+          <span className="text-base font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
+            Agents Design
+          </span>
         </Link>
         <ThemeToggle />
       </div>

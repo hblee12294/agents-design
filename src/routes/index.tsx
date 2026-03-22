@@ -22,7 +22,7 @@ function HomePage() {
     const filtered = getArticlesByTag(tag)
     return (
       <div>
-        <div className="mb-6 flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
+        <div className="mb-8 flex items-center gap-2 text-sm text-neutral-400 dark:text-neutral-500">
           <Link
             to="/"
             className="hover:text-neutral-900 dark:hover:text-neutral-200 transition-colors"
@@ -34,7 +34,7 @@ function HomePage() {
             Tag: {tag}
           </span>
         </div>
-        <section className="space-y-2">
+        <section>
           {filtered.map((article) => (
             <ArticleCard key={article.slug} article={article} />
           ))}
@@ -49,7 +49,7 @@ function HomePage() {
 
   return (
     <div>
-      <section className="space-y-2">
+      <section>
         {filtered.map((article) => (
           <ArticleCard key={article.slug} article={article} />
         ))}

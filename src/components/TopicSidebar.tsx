@@ -20,8 +20,8 @@ export function TopicSidebar() {
   }
 
   return (
-    <nav className="space-y-1">
-      <h3 className="px-3 mb-3 text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500">
+    <nav className="space-y-0.5">
+      <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500">
         Topics
       </h3>
       {topics.map((topic) => (
@@ -29,10 +29,10 @@ export function TopicSidebar() {
           key={topic}
           to="/"
           search={{ topic }}
-          className={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+          className={`block py-1.5 text-[0.9rem] transition-colors ${
             activeTopic === topic
-              ? 'bg-neutral-100 text-neutral-900 font-semibold dark:bg-neutral-800 dark:text-neutral-100'
-              : 'text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-200'
+              ? 'text-neutral-900 font-semibold dark:text-neutral-100'
+              : 'text-neutral-400 hover:text-neutral-900 dark:text-neutral-500 dark:hover:text-neutral-200'
           }`}
         >
           {topic}

@@ -7,22 +7,15 @@ interface ArticleCardProps {
 
 export function ArticleCard({ article }: ArticleCardProps) {
   return (
-    <article className="group -mx-4 rounded-2xl px-4 py-6 transition-colors duration-300 hover:bg-neutral-100/60 dark:hover:bg-white/[0.03]">
-      <span className="text-xs font-medium text-neutral-400 dark:text-neutral-500 uppercase tracking-wider">
-        {article.topic}
-      </span>
-      <Link
-        to="/article/$slug"
-        params={{ slug: article.slug }}
-        className="block mt-1.5"
-      >
-        <h2 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors duration-200">
-          {article.title}
-          <span className="inline-block ml-1.5 text-accent-500 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">&rarr;</span>
-        </h2>
-      </Link>
-      <div className="mt-1.5 flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
-        <span>{article.author}</span>
+    <article className="group py-7 border-b border-neutral-100 dark:border-neutral-800/60 last:border-b-0">
+      <div className="flex items-center gap-1.5 text-xs text-neutral-400 dark:text-neutral-500">
+        <Link
+          to="/"
+          search={{ topic: article.topic }}
+          className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200"
+        >
+          {article.topic}
+        </Link>
         <span>&middot;</span>
         <time dateTime={article.date}>
           {new Date(article.date).toLocaleDateString('en-US', {
@@ -31,8 +24,19 @@ export function ArticleCard({ article }: ArticleCardProps) {
             day: 'numeric',
           })}
         </time>
+        <span>&middot;</span>
+        <span>{article.author}</span>
       </div>
-      <p className="mt-3 text-neutral-600 dark:text-neutral-300 leading-relaxed line-clamp-3">
+      <Link
+        to="/article/$slug"
+        params={{ slug: article.slug }}
+        className="block mt-2"
+      >
+        <h2 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors duration-200">
+          {article.title}
+        </h2>
+      </Link>
+      <p className="mt-2.5 text-neutral-500 dark:text-neutral-400 leading-relaxed line-clamp-2">
         {article.summary}
       </p>
     </article>

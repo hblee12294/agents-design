@@ -33,7 +33,7 @@ html {
 }
 
 body {
-  @apply bg-neutral-50 text-neutral-900 transition-colors duration-200;
+  @apply bg-white text-neutral-900 transition-colors duration-200;
 }
 
 .dark body {
