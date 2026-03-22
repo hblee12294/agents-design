@@ -1,11 +1,23 @@
-import { Link, useMatches } from '@tanstack/react-router'
-import { getAllTopics } from '../lib/articles'
+import { Link, useLocation, useParams } from '@tanstack/react-router'
+import { getAllTopics, getArticleBySlug } from '../lib/articles'
 
 export function TopicSidebar() {
   const topics = getAllTopics()
-  const matches = useMatches()
-  const indexMatch = matches.find((m) => m.routeId === '/')
-  const activeTopic = (indexMatch?.search as { topic?: string })?.topic ?? topics[0]
+  const location = useLocation()
+  const params = useParams({ strict: false }) as { slug?: string }
+  const searchParams = new URLSearchParams(location.search)
+  const searchTag = searchParams.get('tag')
+  const searchTopic = searchParams.get('topic')
+
+  let activeTopic: string | null
+  if (searchTag) {
+    activeTopic = null
+  } else if (params.slug) {
+    const article = getArticleBySlug(params.slug)
+    activeTopic = article?.topic ?? null
+  } else {
+    activeTopic = searchTopic ?? topics[0] ?? null
+  }
 
   return (
     <nav className="space-y-1">
