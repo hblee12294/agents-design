@@ -61,6 +61,3 @@ Add rules and skills iteratively based on real friction. But as they accumulate,
 
 Strip your agent setup to the bare minimum, obsessively manage context, and build up rules and skills iteratively from real usage — the simplicity is the superpower, not the toolchain.
 
----
-
-[Read the original article →](https://medium.com/@nonsensee/how-to-be-a-world-class-agentic-engineer-413783d24388)

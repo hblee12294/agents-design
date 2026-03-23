@@ -61,6 +61,3 @@ The whitepaper introduces the concept of **cognitive architectures** for agents 
 
 Building an effective agent requires thinking beyond the model. The orchestration layer and tool interface are equally important — and often more impactful to improve than the underlying model itself.
 
----
-
-[Read the original article →](https://arxiv.org/abs/2409.02977)

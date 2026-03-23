@@ -37,12 +37,3 @@ body {
 .dark body {
   @apply bg-neutral-950 text-neutral-100;
 }
-
-/* "Read the original" button styling for markdown links */
-.prose :where(.read-original-btn) {
-  @apply inline-flex items-center gap-2 rounded-xl bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white no-underline hover:bg-neutral-700 transition-colors duration-200;
-}
-
-.dark .prose :where(.read-original-btn) {
-  @apply bg-white text-neutral-900 hover:bg-neutral-200;
-}

@@ -2,8 +2,6 @@ import { defineConfig, fontProviders } from 'astro/config'
 import tailwindcss from '@tailwindcss/vite'
 import sitemap from '@astrojs/sitemap'
 import remarkGfm from 'remark-gfm'
-import rehypeReadOriginal from './src/lib/rehype-read-original'
-
 import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
@@ -13,7 +11,6 @@ export default defineConfig({
 
   markdown: {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypeReadOriginal],
     shikiConfig: {
       themes: { light: 'github-light', dark: 'github-dark' },
     },

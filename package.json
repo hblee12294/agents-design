@@ -7,7 +7,7 @@
   "homepage": "https://agentsdesign.dev",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hblee12294/agent-design"
+    "url": "https://github.com/hblee12294/agents-design"
   },
   "type": "module",
   "scripts": {

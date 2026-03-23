@@ -37,6 +37,3 @@ The article recommends true agents (with tool use and autonomous loop control) o
 2. Transparency is critical: show the agent's planning steps to users
 3. Invest heavily in your **tool design** — clear names, thorough descriptions, and well-tested interfaces make or break agent performance
 
----
-
-[Read the original article →](https://www.anthropic.com/research/building-effective-agents)

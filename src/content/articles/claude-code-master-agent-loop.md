@@ -47,6 +47,3 @@ The permission system requires explicit user approval for write operations and r
 
 The strongest agent architecture isn't necessarily the most complex one. Claude Code proves that a single-threaded loop doing one thing obsessively well — think, act, observe, repeat — combined with disciplined tool design and transparent planning, can outperform elaborate multi-agent systems while remaining controllable and predictable.
 
----
-
-[Read the original article →](https://blog.promptlayer.com/claude-code-behind-the-scenes-of-the-master-agent-loop/)
