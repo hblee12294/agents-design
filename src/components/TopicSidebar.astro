@@ -1,28 +1,32 @@
 ---
-import { TOPIC_ORDER, topicToSlug } from '../lib/topics'
+import { TOPIC_ORDER, topicToSlug } from "../lib/topics";
 
 interface Props {
-  activeTopic: string | null
+  activeTopic: string | null;
 }
 
-const { activeTopic } = Astro.props
+const { activeTopic } = Astro.props;
 ---
 
 <nav class="space-y-0.5">
-  <h3 class="mb-4 text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500">
+  <h3
+    class="mb-4 text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500"
+  >
     Topics
   </h3>
-  {TOPIC_ORDER.map((topic) => (
-    <a
-      href={`/topic/${topicToSlug(topic)}/`}
-      class:list={[
-        'block py-1.5 text-[0.9rem] transition-colors',
-        activeTopic === topic
-          ? 'text-neutral-900 font-semibold dark:text-neutral-100'
-          : 'text-neutral-400 hover:text-neutral-900 dark:text-neutral-500 dark:hover:text-neutral-200',
-      ]}
-    >
-      {topic}
-    </a>
-  ))}
+  {
+    TOPIC_ORDER.map((topic) => (
+      <a
+        href={`/topic/${topicToSlug(topic)}/`}
+        class:list={[
+          "block py-1.5 text-[0.9rem] transition-colors",
+          activeTopic === topic
+            ? "text-neutral-900 font-semibold dark:text-neutral-100"
+            : "text-neutral-400 hover:text-neutral-900 dark:text-neutral-500 dark:hover:text-neutral-200",
+        ]}
+      >
+        {topic}
+      </a>
+    ))
+  }
 </nav>
