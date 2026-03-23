@@ -11,7 +11,7 @@ const articles = defineCollection({
     author: z.string(),
     date: z.string(),
     originalUrl: z.string().url(),
-    topic: z.enum(['Fundamentals', 'Design Patterns', 'Best Practices']),
+    topic: z.string(),
     tags: z.array(z.string()),
   }),
 })

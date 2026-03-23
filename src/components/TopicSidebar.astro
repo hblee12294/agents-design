@@ -1,11 +1,14 @@
 ---
-import { TOPIC_ORDER, topicToSlug } from "../lib/topics";
+import { getCollection } from "astro:content";
+import { getOrderedTopics, topicToSlug } from "../lib/topics";
 
 interface Props {
   activeTopic: string | null;
 }
 
 const { activeTopic } = Astro.props;
+const allArticles = await getCollection("articles");
+const topics = getOrderedTopics(allArticles.map((a) => a.data.topic));
 ---
 
 <nav class="space-y-0.5">
@@ -15,7 +18,7 @@ const { activeTopic } = Astro.props;
     Topics
   </h3>
   {
-    TOPIC_ORDER.map((topic) => (
+    topics.map((topic) => (
       <a
         href={`/topic/${topicToSlug(topic)}/`}
         class:list={[

@@ -2,10 +2,11 @@
 import { getCollection } from 'astro:content'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import ArticleCard from '../components/ArticleCard.astro'
-import { TOPIC_ORDER } from '../lib/topics'
+import { getOrderedTopics } from '../lib/topics'
 
-const defaultTopic = TOPIC_ORDER[0]
 const allArticles = await getCollection('articles')
+const topics = getOrderedTopics(allArticles.map((a) => a.data.topic))
+const defaultTopic = topics[0]
 const articles = allArticles
   .filter((a) => a.data.topic === defaultTopic)
   .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())

@@ -2,10 +2,12 @@
 import { getCollection } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import ArticleCard from '../../components/ArticleCard.astro'
-import { TOPIC_ORDER, topicToSlug } from '../../lib/topics'
+import { getOrderedTopics, topicToSlug } from '../../lib/topics'
 
-export function getStaticPaths() {
-  return TOPIC_ORDER.map((topic) => ({
+export async function getStaticPaths() {
+  const allArticles = await getCollection('articles')
+  const topics = getOrderedTopics(allArticles.map((a) => a.data.topic))
+  return topics.map((topic) => ({
     params: { topic: topicToSlug(topic) },
     props: { topicName: topic },
   }))
