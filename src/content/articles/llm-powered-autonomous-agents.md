@@ -48,6 +48,3 @@ Tools extend the agent's capabilities beyond what the LLM can do alone:
 
 An effective agent is not just a powerful LLM — it is an LLM augmented with structured planning strategies, external memory systems, and a well-designed tool interface. Each component can be improved independently.
 
----
-
-[Read the original article →](https://lilianweng.github.io/posts/2023-06-23-agent/)

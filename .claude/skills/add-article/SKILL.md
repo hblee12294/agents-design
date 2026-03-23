@@ -99,11 +99,9 @@ tags:
 ## Key Takeaway
 
 <1-2 sentences distilling the single most important insight from the article.>
-
----
-
-[Read the original article →](<originalUrl>)
 ```
+
+**Important:** Do NOT add a "Read the original article" link at the end of the markdown. The button is automatically rendered from the `originalUrl` frontmatter field by the article page template.
 
 ### Conventions
 

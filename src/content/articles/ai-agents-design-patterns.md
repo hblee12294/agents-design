@@ -44,6 +44,3 @@ The article emphasizes that pattern choice depends on:
 
 Start with a single ReAct agent. Add complexity (multi-agent, hierarchy) only when you hit clear limitations. The best agent architecture is the simplest one that reliably solves your problem.
 
----
-
-[Read the original article →](https://medium.com/@keremaydin03/ai-agents-design-patterns-explained-bc5e5e2bb349)

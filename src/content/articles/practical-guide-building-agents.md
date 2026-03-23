@@ -62,6 +62,3 @@ Building agents is iterative. The guide recommends:
 
 A reliable agent is built on **clear tools, clear instructions, and clear guardrails** — not on clever prompting tricks. Invest in the fundamentals and iterate based on evaluation.
 
----
-
-[Read the original article →](https://platform.openai.com/docs/guides/agents)
