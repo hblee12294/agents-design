@@ -4,7 +4,7 @@ slug: ai-agents-design-patterns
 summary: "A comprehensive overview of the major design patterns for building AI agents, from single-agent architectures to multi-agent collaboration, with clear diagrams and practical trade-offs for each pattern."
 author: Kerem Aydin
 date: "2025-01-15"
-originalUrl: https://medium.com/@keremaydin03/ai-agents-design-patterns-explained-bc5e5e2bb349
+originalUrl: https://medium.com/@aydinKerem/ai-agents-design-patterns-explained-b3ac0433c915
 topic: Design Patterns
 tags:
   - design patterns
@@ -21,7 +21,7 @@ Kerem Aydin presents a **pattern catalog** for AI agent architectures, providing
 
 ### Single Agent Patterns
 
-- **ReAct (Reasoning + Acting)** — the agent alternates between reasoning about the current state and taking actions. This is the foundational loop: *Think → Act → Observe → Repeat*. Most basic agent implementations follow this pattern.
+- **ReAct (Reasoning + Acting)** — the agent alternates between reasoning about the current state and taking actions. This is the foundational loop: _Think → Act → Observe → Repeat_. Most basic agent implementations follow this pattern.
 - **Tool Use Agent** — extends the ReAct loop with an explicit tool selection step. The agent decides which tool to invoke based on the current task, executes it, and incorporates the result.
 
 ### Multi-Agent Patterns

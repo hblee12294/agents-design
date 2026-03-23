@@ -4,7 +4,7 @@ slug: google-agents-whitepaper
 summary: "Google's comprehensive whitepaper distinguishing agents from plain models, explaining how tools, orchestration layers, and cognitive architectures combine to create capable AI agents."
 author: Google
 date: "2024-09-01"
-originalUrl: https://arxiv.org/abs/2409.02977
+originalUrl: https://www.kaggle.com/whitepaper-agents
 topic: Fundamentals
 tags:
   - architecture
