@@ -1,0 +1,43 @@
+---
+import Head from '../components/Head.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import TopicSidebar from '../components/TopicSidebar.astro'
+import '../styles/app.css'
+
+interface Props {
+  title: string
+  description: string
+  activeTopic?: string | null
+}
+
+const { title, description, activeTopic = null } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Head title={title} description={description} />
+  </head>
+  <body>
+    <div class="min-h-screen flex flex-col">
+      <Header />
+      <div class="mx-auto w-full max-w-6xl flex-1 px-8 lg:px-12 py-14 flex gap-14">
+        <aside class="hidden md:block w-44 shrink-0">
+          <div class="sticky top-8">
+            <TopicSidebar activeTopic={activeTopic} />
+          </div>
+        </aside>
+        <main class="flex-1 min-w-0">
+          <slot />
+        </main>
+      </div>
+      <Footer />
+    </div>
+    <script is:inline>
+      if (location.hash.startsWith('#/')) {
+        location.replace(location.hash.slice(1).replace(/\/?$/, '/'));
+      }
+    </script>
+  </body>
+</html>
