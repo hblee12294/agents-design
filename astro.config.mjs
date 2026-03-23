@@ -4,10 +4,13 @@ import sitemap from '@astrojs/sitemap'
 import remarkGfm from 'remark-gfm'
 import rehypeReadOriginal from './src/lib/rehype-read-original'
 
+import cloudflare from '@astrojs/cloudflare';
+
 export default defineConfig({
   site: 'https://agentsdesign.dev',
   output: 'static',
   trailingSlash: 'always',
+
   markdown: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypeReadOriginal],
@@ -15,6 +18,7 @@ export default defineConfig({
       themes: { light: 'github-light', dark: 'github-dark' },
     },
   },
+
   fonts: [
     {
       name: 'Inter',
@@ -22,7 +26,9 @@ export default defineConfig({
       provider: fontProviders.fontsource(),
     },
   ],
+
   integrations: [sitemap()],
   vite: { plugins: [tailwindcss()] },
   server: { port: 4000 },
+  adapter: cloudflare(),
 })
