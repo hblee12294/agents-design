@@ -4,7 +4,7 @@ slug: building-effective-agents
 summary: "Anthropic's guide to building effective AI agents, covering workflow patterns like prompt chaining, routing, parallelization, and the orchestrator-workers pattern. Emphasizes simplicity and starting with the least complex solution."
 author: Anthropic
 date: "2024-12-20"
-originalUrl: https://www.anthropic.com/research/building-effective-agents
+originalUrl: https://www.anthropic.com/engineering/building-effective-agents
 topic: Design Patterns
 tags:
   - workflow patterns
@@ -19,7 +19,7 @@ This article from Anthropic offers a practical, opinionated guide to building LL
 
 ## Key Workflow Patterns
 
-The article defines a clear taxonomy of **agentic systems**, distinguishing between *workflows* (predetermined orchestration of LLMs) and *agents* (LLMs dynamically directing their own processes):
+The article defines a clear taxonomy of **agentic systems**, distinguishing between _workflows_ (predetermined orchestration of LLMs) and _agents_ (LLMs dynamically directing their own processes):
 
 - **Prompt Chaining** — break a task into sequential steps, where each LLM call processes the output of the previous one. Useful when you can decompose a task cleanly.
 - **Routing** — classify the input first, then direct it to a specialized handler. Good for complex tasks with distinct categories.
