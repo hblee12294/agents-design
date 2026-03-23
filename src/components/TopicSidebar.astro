@@ -13,7 +13,7 @@ const topics = getOrderedTopics(allArticles.map((a) => a.data.topic));
 
 <nav class="space-y-0.5">
   <h3
-    class="mb-4 text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500"
+    class="mb-4 text-xs font-semibold uppercase tracking-wider text-stone-400 dark:text-stone-500"
   >
     Topics
   </h3>
@@ -24,8 +24,8 @@ const topics = getOrderedTopics(allArticles.map((a) => a.data.topic));
         class:list={[
           "block py-1.5 text-[0.9rem] transition-colors",
           activeTopic === topic
-            ? "text-neutral-900 font-semibold dark:text-neutral-100"
-            : "text-neutral-400 hover:text-neutral-900 dark:text-neutral-500 dark:hover:text-neutral-200",
+            ? "text-stone-800 font-semibold dark:text-stone-200"
+            : "text-stone-400 hover:text-stone-800 dark:text-stone-500 dark:hover:text-stone-200",
         ]}
       >
         {topic}
