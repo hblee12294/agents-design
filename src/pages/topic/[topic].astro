@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import ArticleCard from '../../components/ArticleCard.astro'
+import { TOPIC_ORDER, topicToSlug } from '../../lib/topics'
+
+export function getStaticPaths() {
+  return TOPIC_ORDER.map((topic) => ({
+    params: { topic: topicToSlug(topic) },
+    props: { topicName: topic },
+  }))
+}
+
+interface Props {
+  topicName: string
+}
+
+const { topicName } = Astro.props
+const allArticles = await getCollection('articles')
+const articles = allArticles
+  .filter((a) => a.data.topic === topicName)
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+---
+
+<BaseLayout
+  title={`${topicName} — Agents Design`}
+  description={`Articles about ${topicName.toLowerCase()} in AI agent design.`}
+  activeTopic={topicName}
+>
+  <section>
+    {articles.map((article) => (
+      <ArticleCard
+        title={article.data.title}
+        slug={article.data.slug}
+        summary={article.data.summary}
+        topic={article.data.topic}
+        date={article.data.date}
+        author={article.data.author}
+      />
+    ))}
+  </section>
+</BaseLayout>

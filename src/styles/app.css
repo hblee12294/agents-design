@@ -1,12 +1,10 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
-@import '@fontsource-variable/inter';
-@import 'highlight.js/styles/github.css';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --color-accent-50: oklch(0.97 0.014 264);
   --color-accent-100: oklch(0.93 0.029 264);
   --color-accent-200: oklch(0.87 0.056 264);
@@ -40,43 +38,11 @@ body {
   @apply bg-neutral-950 text-neutral-100;
 }
 
-/* Dark mode highlight.js override */
-.dark pre code.hljs {
-  background: oklch(0.22 0.01 264);
-  color: #c9d1d9;
+/* "Read the original" button styling for markdown links */
+.prose :where(.read-original-btn) {
+  @apply inline-flex items-center gap-2 rounded-xl bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white no-underline hover:bg-neutral-700 transition-colors duration-200;
 }
 
-.dark .hljs-keyword,
-.dark .hljs-selector-tag,
-.dark .hljs-literal,
-.dark .hljs-section,
-.dark .hljs-link {
-  color: #ff7b72;
-}
-
-.dark .hljs-string,
-.dark .hljs-attr,
-.dark .hljs-symbol,
-.dark .hljs-bullet,
-.dark .hljs-addition {
-  color: #a5d6ff;
-}
-
-.dark .hljs-title,
-.dark .hljs-type,
-.dark .hljs-built_in,
-.dark .hljs-selector-id,
-.dark .hljs-selector-class {
-  color: #d2a8ff;
-}
-
-.dark .hljs-comment,
-.dark .hljs-quote,
-.dark .hljs-deletion,
-.dark .hljs-meta {
-  color: #8b949e;
-}
-
-.dark .hljs-number {
-  color: #79c0ff;
+.dark .prose :where(.read-original-btn) {
+  @apply bg-white text-neutral-900 hover:bg-neutral-200;
 }

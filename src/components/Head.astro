@@ -1,0 +1,41 @@
+---
+interface Props {
+  title: string
+  description: string
+  canonicalUrl?: string
+}
+
+const { title, description, canonicalUrl } = Astro.props
+const gaId = import.meta.env.PUBLIC_GA_ID
+const url = canonicalUrl ?? Astro.url.href
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={url} />
+<meta property="og:type" content="website" />
+<link rel="canonical" href={url} />
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+{gaId && (
+  <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+  <script is:inline define:vars={{ gaId }}>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', gaId);
+  </script>
+)}
+
+<script is:inline>
+  (function() {
+    var t = localStorage.getItem('theme');
+    if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches))
+      document.documentElement.classList.add('dark');
+  })();
+</script>
