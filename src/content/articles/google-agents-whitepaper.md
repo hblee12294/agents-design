@@ -3,7 +3,7 @@ title: "Agents White Paper"
 slug: google-agents-whitepaper
 summary: "Google's comprehensive whitepaper distinguishing agents from plain models, explaining how tools, orchestration layers, and cognitive architectures combine to create capable AI agents."
 author: Google
-date: "2024-09-01"
+date: "2025-02-01"
 originalUrl: https://www.kaggle.com/whitepaper-agents
 topic: Fundamentals
 tags:
@@ -60,4 +60,3 @@ The whitepaper introduces the concept of **cognitive architectures** for agents 
 ## Key Takeaway
 
 Building an effective agent requires thinking beyond the model. The orchestration layer and tool interface are equally important — and often more impactful to improve than the underlying model itself.
-

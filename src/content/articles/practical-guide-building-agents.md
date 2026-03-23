@@ -4,7 +4,7 @@ slug: practical-guide-building-agents
 summary: "OpenAI's practical guide covering the three pillars of agent construction — choosing the right model, defining tools clearly, and writing effective instructions — with actionable advice on guardrails and evaluation."
 author: OpenAI
 date: "2025-01-16"
-originalUrl: https://platform.openai.com/docs/guides/agents
+originalUrl: https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/
 topic: Best Practices
 tags:
   - best practices
@@ -61,4 +61,3 @@ Building agents is iterative. The guide recommends:
 ## Key Takeaway
 
 A reliable agent is built on **clear tools, clear instructions, and clear guardrails** — not on clever prompting tricks. Invest in the fundamentals and iterate based on evaluation.
-
