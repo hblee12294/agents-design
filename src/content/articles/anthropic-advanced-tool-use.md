@@ -5,7 +5,7 @@ summary: "Introduces three advanced tool use features — tool search, programma
 author: Anthropic
 date: "2025-11-24"
 originalUrl: https://www.anthropic.com/engineering/advanced-tool-use
-topic: Design Patterns
+topic: Platform & Tools
 tags:
   - tool use
   - architecture

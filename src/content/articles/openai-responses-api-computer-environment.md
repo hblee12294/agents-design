@@ -5,7 +5,7 @@ summary: "OpenAI's architecture for turning isolated model calls into sustained 
 author: OpenAI
 date: "2026-03-11"
 originalUrl: https://openai.com/index/equip-responses-api-computer-environment/
-topic: Design Patterns
+topic: Platform & Tools
 tags:
   - architecture
   - tool use
