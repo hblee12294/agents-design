@@ -2,7 +2,7 @@
  * Defines the display order for known topics.
  * New topics from articles are appended alphabetically after these.
  */
-export const TOPIC_ORDER = ['Fundamentals', 'Design Patterns', 'Best Practices', 'Platform & Tools'] as const
+export const TOPIC_ORDER = ['Fundamentals', 'Design Patterns', 'Best Practices', 'Platform & Tools', 'Skills'] as const
 
 export function topicToSlug(topic: string): string {
   return topic.toLowerCase().replace(/\s+/g, '-')
