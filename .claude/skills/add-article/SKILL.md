@@ -108,7 +108,7 @@ tags:
 - **Slug**: lowercase, kebab-case, descriptive (e.g., `anthropic-tool-use-patterns`)
 - **Summary**: 1-2 sentences, specific about the article's contribution, no generic fluff
 - **Date**: Use the article's publication date in `YYYY-MM-DD` format. If only month/year is available, use the 1st of that month.
-- **Topic**: Use an existing topic from `src/lib/topics.ts` when possible. If the article needs a new topic, add it to the `TOPIC_ORDER` array in that file. New topics will automatically get their own page and sidebar entry.
+- **Topic**: Use an existing topic from `src/lib/topics.ts` when possible. Current topics: Fundamentals, Design Patterns, Best Practices, Platform & Tools, Skills. Use "Skills" for reusable Claude Code skills, rule sets, or prompt libraries that agents can apply. If the article needs a new topic, add it to the `TOPIC_ORDER` array in that file. New topics will automatically get their own page and sidebar entry.
 - **Tags**: Use 3-5 tags from the existing tag vocabulary when possible. Check existing articles for commonly used tags. Create new tags sparingly.
 - **Body**: 200-500 words. Summarize, don't copy. Use your own words. Focus on the frameworks, patterns, and actionable insights.
 - **Tone**: Technical, concise, editorial. Write like a thoughtful curator, not a search engine.
